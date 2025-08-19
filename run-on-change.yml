@@ -1,0 +1,19 @@
+name: Run Batch on File Change
+
+on:
+  push:
+    paths:
+      - 'MyProject.Acd'      
+  workflow_dispatch:  # Enables manual triggering
+
+jobs:
+  run-batch:
+    runs-on: [self-hosted]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run batch file
+        shell: cmd
+        run: |
+           "C:\actions-runner\Work\UpdateController_Template.bat"
