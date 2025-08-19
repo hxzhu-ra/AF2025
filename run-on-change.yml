@@ -16,4 +16,4 @@ jobs:
       - name: Run batch file
         shell: cmd
         run: |
-           "C:\actions-runner\Work\Controller_Download.bat"
+           "C:\actions-runner\_work\Controller_Download.bat"
